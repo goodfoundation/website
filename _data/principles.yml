@@ -1,0 +1,23 @@
+- title: Open by default
+  icon: code
+  body: >-
+    Every project we support ships under a permissive or copyleft licence, with
+    a public roadmap and an issue tracker anyone can read.
+
+- title: People before metrics
+  icon: heart
+  body: >-
+    We measure success by the problems solved for real communities, not by
+    engagement graphs or acquisition funnels.
+
+- title: Built to outlive us
+  icon: sprout
+  body: >-
+    Funding, governance and documentation are designed so that a project keeps
+    running long after its first maintainer moves on.
+
+- title: Privacy is not a feature
+  icon: shield
+  body: >-
+    No trackers, no dark patterns, no data brokered on the side. Software that
+    serves the public good should never be paid for with its users' data.

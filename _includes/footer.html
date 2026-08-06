@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">
+      <img
+        src="{{ '/assets/good-software-foundation.svg' | relative_url }}"
+        alt="{{ site.title }}"
+        width="190"
+        height="62"
+      />
+      <p class="site-footer__desc">{{ site.description }}</p>
+    </div>
+
+    <div class="site-footer__cols">
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#principles">Principles</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <ul>
+          {%- for item in site.social %}
+          <li><a href="{{ item.url }}" rel="noopener">{{ item.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap site-footer__legal">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p>Content licensed CC BY 4.0 &middot; Code licensed MIT.</p>
+  </div>
+</footer>

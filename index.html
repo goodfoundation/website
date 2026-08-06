@@ -1,0 +1,167 @@
+---
+layout: default
+title: Good Software Foundation
+---
+
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow" data-reveal>A non-profit software foundation</p>
+    <h1 class="hero__title" data-reveal data-reveal-delay="1">
+      Good software,<br />
+      <span class="hero__title-accent">built for people.</span>
+    </h1>
+    <p class="hero__lede" data-reveal data-reveal-delay="2">
+      We fund, maintain and steward open source projects that quietly hold up
+      hospitals, classrooms and communities &mdash; the software nobody markets,
+      but everybody needs.
+    </p>
+    <div class="hero__actions" data-reveal data-reveal-delay="3">
+      <a class="btn btn--solid" href="#projects">
+        See our projects {% include icon.html name="arrow" %}
+      </a>
+      <a class="btn btn--ghost" href="#support">Support the mission</a>
+    </div>
+    <div class="hero__mark" data-reveal data-reveal-delay="4">
+      <img
+        src="{{ '/assets/gsf-mark.svg' | relative_url }}"
+        alt=""
+        aria-hidden="true"
+        width="46"
+        height="39"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section section--about" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="about__intro">
+        <p class="eyebrow" data-reveal>Who we are</p>
+        <h2 class="section__title" data-reveal data-reveal-delay="1">
+          A home for software that serves the public good.
+        </h2>
+      </div>
+      <div class="about__body">
+        <p data-reveal data-reveal-delay="2">
+          The Good Software Foundation is an independent non-profit. We exist
+          because the most important software in the world is often the least
+          funded: the library behind a clinic's records, the tool a teacher uses
+          offline, the ledger a small charity trusts with every donation.
+        </p>
+        <p data-reveal data-reveal-delay="3">
+          We give those projects what they usually lack &mdash; sustained
+          funding, security review, release engineering and governance that
+          outlives any single maintainer. Everything we support is open source,
+          auditable and free to use. We take no equity, we sell no data, and we
+          answer to the communities we serve.
+        </p>
+      </div>
+    </div>
+
+    <div class="stats">
+      {%- for stat in site.data.stats %}
+      <div class="stat" data-reveal data-reveal-delay="{{ forloop.index }}">
+        <span class="stat__value">{{ stat.value }}</span>
+        <span class="stat__label">{{ stat.label }}</span>
+        <span class="stat__note">{{ stat.note }}</span>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--projects" id="projects">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>Our projects</p>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">
+        What we support
+      </h2>
+      <p class="section__lede" data-reveal data-reveal-delay="2">
+        Each project is developed in the open, governed transparently and built
+        to keep running long after the first release.
+      </p>
+    </div>
+
+    <div class="cards">
+      {%- for project in site.data.projects %}
+      <article class="card" data-reveal data-reveal-delay="{{ forloop.index0 | modulo: 3 | plus: 1 }}">
+        <div class="card__top">
+          <span class="card__icon">{% include icon.html name=project.icon %}</span>
+          {%- if project.status %}
+          <span class="badge badge--{{ project.status | downcase }}">{{ project.status }}</span>
+          {%- endif %}
+        </div>
+        <h3 class="card__title">{{ project.name }}</h3>
+        <p class="card__tagline">{{ project.tagline }}</p>
+        <p class="card__desc">{{ project.description }}</p>
+        {%- if project.tags %}
+        <ul class="tags">
+          {%- for tag in project.tags %}
+          <li>{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        {%- if project.links %}
+        <div class="card__links">
+          {%- for link in project.links %}
+          <a
+            class="card__link{% if link.primary %} card__link--primary{% endif %}"
+            href="{{ link.url }}"
+            {% unless link.url contains '#' %}rel="noopener"{% endunless %}
+          >
+            {{ link.label }}
+            {% include icon.html name="arrow" %}
+          </a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--principles" id="principles">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>How we work</p>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">
+        Four commitments we do not trade away
+      </h2>
+    </div>
+
+    <div class="principles">
+      {%- for principle in site.data.principles %}
+      <div class="principle" data-reveal data-reveal-delay="{{ forloop.index }}">
+        <span class="principle__icon">{% include icon.html name=principle.icon %}</span>
+        <h3>{{ principle.title }}</h3>
+        <p>{{ principle.body }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--cta" id="support">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <h2 class="cta__title">Help us keep good software alive.</h2>
+      <p class="cta__lede">
+        Donate, contribute code, or nominate a project that deserves support.
+        Every contribution goes directly into maintenance, security and the
+        people who do the work.
+      </p>
+      <div class="cta__actions">
+        <a class="btn btn--solid" href="mailto:{{ site.email }}">
+          Get in touch {% include icon.html name="arrow" %}
+        </a>
+        <a class="btn btn--ghost" href="https://github.com/{{ site.github_org }}" rel="noopener">
+          {% include icon.html name="github" %} Contribute on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

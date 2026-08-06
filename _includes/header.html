@@ -1,0 +1,39 @@
+<header class="site-header" data-header>
+  <div class="wrap site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img
+        class="brand__mark"
+        src="{{ '/assets/gsf-mark.svg' | relative_url }}"
+        alt=""
+        width="40"
+        height="34"
+      />
+      <span class="brand__name">Good Software<br />Foundation</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list" data-nav>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#support">Support us</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--solid btn--sm nav__cta" href="#support">Get involved</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <span class="nav-toggle__bar"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#principles">Principles</a></li>
+      <li><a href="#support">Support us</a></li>
+    </ul>
+  </div>
+</header>

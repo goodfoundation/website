@@ -1,0 +1,38 @@
+title: Good Software Foundation
+tagline: Software built for people, not for profit
+description: >-
+  The Good Software Foundation is a non-profit that funds, maintains and
+  stewards open source software that serves the public good.
+
+# Update `url` to your custom domain (and keep `baseurl` empty when using one).
+# If you publish at https://goodfoundation.github.io/website instead,
+# set baseurl to "/website".
+url: "https://goodsoftware.foundation"
+baseurl: ""
+
+email: hello@goodsoftware.foundation
+github_org: goodfoundation
+
+logo: /assets/gsf-logo-white-bg.png
+image: /assets/good-software-foundation-text.png
+
+social:
+  - name: GitHub
+    url: https://github.com/goodfoundation
+  - name: Email
+    url: mailto:hello@goodsoftware.foundation
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - serve.sh
+  - vendor
+  - .github

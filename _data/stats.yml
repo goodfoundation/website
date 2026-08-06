@@ -1,0 +1,15 @@
+- value: "6"
+  label: Projects supported
+  note: Across health, education and civic tech
+
+- value: "40+"
+  label: Contributors
+  note: Volunteers and funded maintainers
+
+- value: "100%"
+  label: Open source
+  note: Every line we fund is public
+
+- value: "0"
+  label: Trackers shipped
+  note: In any project we steward
