@@ -1,19 +1,25 @@
 - title: Open by default
   icon: code
   body: >-
-    Every project we support ships under a permissive or copyleft licence, with
-    a public roadmap and an issue tracker anyone can read.
+    Every project we support ships under an OSI-approved license, with a public
+    roadmap and an issue tracker anyone can read.
 
-- title: People before metrics
-  icon: heart
+- title: The community sets the agenda
+  icon: map
   body: >-
-    We measure success by the problems solved for real communities, not by
-    engagement graphs or acquisition funnels.
+    The organizations living with a problem decide what gets built. We do not
+    arrive with a roadmap and go looking for somewhere to apply it.
+
+- title: No one is priced out
+  icon: book
+  body: >-
+    Workshops are free or low-cost, and the curriculum is published openly.
+    Ability to pay is never what decides who gets to build.
 
 - title: Built to outlive us
   icon: sprout
   body: >-
-    Funding, governance and documentation are designed so that a project keeps
+    We design funding, governance and documentation so that a project can keep
     running long after its first maintainer moves on.
 
 - title: Privacy is not a feature
