@@ -13,14 +13,14 @@
 
     <nav class="nav" aria-label="Primary">
       <ul class="nav__list" data-nav>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Feature Projects</a></li>
-        <li><a href="#principles">Principles</a></li>
-        <li><a href="#support">Support us</a></li>
+        <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+        <li><a href="{{ '/#projects' | relative_url }}">Feature Projects</a></li>
+        <li><a href="{{ '/#principles' | relative_url }}">Principles</a></li>
+        <li><a href="{{ '/#support' | relative_url }}">Support us</a></li>
       </ul>
     </nav>
 
-    <a class="btn btn--solid btn--sm nav__cta" href="#support">Get involved</a>
+    <a class="btn btn--solid btn--sm nav__cta" href="{{ '/#support' | relative_url }}">Get involved</a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
       <span class="nav-toggle__bar"></span>
@@ -30,10 +30,10 @@
 
   <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Feature Projects</a></li>
-      <li><a href="#principles">Principles</a></li>
-      <li><a href="#support">Support us</a></li>
+      <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+      <li><a href="{{ '/#projects' | relative_url }}">Feature Projects</a></li>
+      <li><a href="{{ '/#principles' | relative_url }}">Principles</a></li>
+      <li><a href="{{ '/#support' | relative_url }}">Support us</a></li>
     </ul>
   </div>
 </header>
