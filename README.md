@@ -35,14 +35,15 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 Most changes need no HTML. Edit the YAML files in `_data/`.
 
-### Project cards — `_data/projects.yml`
+### Feature project cards — `_data/projects.yml`
 
 Each list entry becomes one card, in file order.
 
 ```yaml
-- name: Open Ledger                  # card heading
-  tagline: Transparent finances      # accent line under the heading
-  icon: ledger                       # see "Icons" below
+- name: MasjidFeed                   # card heading
+  tagline: Mobile for mosque websites # accent line under the heading
+  logo: /assets/masjidfeed-app-icon.png # optional raster app icon
+  icon: ledger                       # optional inline icon; see "Icons" below
   status: Active                     # optional pill; omit to hide it
   description: >-
     Two or three sentences about the project.
@@ -144,5 +145,6 @@ Push to `main`. The workflow installs gems, builds with `JEKYLL_ENV=production`
 and publishes the artifact. Requires **Settings → Pages → Source: GitHub Actions**.
 
 For a custom domain, add a `CNAME` file at the repository root containing the
-domain, and keep `baseurl` empty in `_config.yml`. Without a custom domain the
-workflow injects the correct `--baseurl` automatically.
+domain, set `url` to that domain, and keep `baseurl` empty in `_config.yml`.
+For the GitHub project site, keep `url` set to `https://goodfoundation.github.io`
+and `baseurl` set to `/website`.

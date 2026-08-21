@@ -4,11 +4,9 @@ description: >-
   The Good Software Foundation is a non-profit that funds, maintains and
   stewards open source software that serves the public good.
 
-# Update `url` to your custom domain (and keep `baseurl` empty when using one).
-# If you publish at https://goodfoundation.github.io/website instead,
-# set baseurl to "/website".
-url: "https://goodsoftware.foundation"
-baseurl: ""
+# For a custom domain, set `url` to that domain and keep `baseurl` empty.
+url: "https://goodfoundation.github.io"
+baseurl: "/website"
 
 email: hello@goodsoftware.foundation
 github_org: goodfoundation

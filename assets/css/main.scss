@@ -552,6 +552,20 @@ ul {
   font-size: 26px;
 }
 
+.card__icon--image {
+  overflow: hidden;
+  padding: 4px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    object-fit: cover;
+  }
+}
+
 .badge {
   font-size: 0.72rem;
   font-weight: 600;
@@ -644,6 +658,118 @@ ul {
 
 .card__link--primary {
   color: var(--accent);
+}
+
+/* MasjidFeed project page ------------------------------------------------ */
+
+.project-hero {
+  padding: clamp(72px, 11vw, 132px) 0 clamp(64px, 9vw, 104px);
+  background: var(--bg-muted);
+}
+
+.project-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  align-items: center;
+  gap: clamp(48px, 9vw, 120px);
+}
+
+.project-hero__title {
+  max-width: 680px;
+  font-size: clamp(3rem, 6vw, 5.7rem);
+}
+
+.project-hero__lede {
+  max-width: 620px;
+  margin: 24px 0 32px;
+  color: var(--ink-soft);
+  font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+}
+
+.project-hero__art {
+  display: flex;
+  justify-content: center;
+}
+
+.project-app-icon {
+  display: grid;
+  width: clamp(172px, 23vw, 260px);
+  aspect-ratio: 1;
+  place-items: center;
+  padding: clamp(9px, 1.3vw, 14px);
+  border: 1px solid var(--line-strong);
+  border-radius: 24%;
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    object-fit: cover;
+  }
+}
+
+.project-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(36px, 8vw, 96px);
+  align-items: start;
+}
+
+.project-overview__title {
+  font-size: clamp(2rem, 3.8vw, 3.3rem);
+}
+
+.project-overview__body {
+  color: var(--ink-soft);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-screenshots {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.project-screenshot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: var(--shadow-md);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.project-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.project-feature {
+  padding: 28px 0 0;
+  border-top: 2px solid var(--accent);
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.96rem;
+  }
 }
 
 /* Principles ------------------------------------------------------------- */
@@ -860,6 +986,23 @@ html:not(.js) [data-reveal] {
   .site-footer__inner {
     grid-template-columns: 1fr;
   }
+
+  .project-hero__inner,
+  .project-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero__art {
+    justify-content: flex-start;
+  }
+
+  .project-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 780px) {
@@ -884,6 +1027,15 @@ html:not(.js) [data-reveal] {
 
   .card {
     padding: 26px 22px;
+  }
+
+  .project-features {
+    grid-template-columns: 1fr;
+  }
+
+  .project-screenshots {
+    grid-template-columns: 1fr;
+    max-width: 280px;
   }
 
   .hero__actions .btn,

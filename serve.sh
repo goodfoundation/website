@@ -28,4 +28,4 @@ fi
 bundle config set --local path vendor/bundle
 bundle check >/dev/null 2>&1 || bundle install
 
-exec bundle exec jekyll serve --livereload "$@"
+exec bundle exec jekyll serve --livereload --baseurl "" "$@"

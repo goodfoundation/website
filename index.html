@@ -19,7 +19,7 @@ title: Good Software Foundation
     </p>
     <div class="hero__actions" data-reveal data-reveal-delay="3">
       <a class="btn btn--solid" href="#projects">
-        See our projects {% include icon.html name="arrow" %}
+        See feature projects {% include icon.html name="arrow" %}
       </a>
       <a class="btn btn--ghost" href="#support">Support the mission</a>
     </div>
@@ -82,7 +82,7 @@ title: Good Software Foundation
 <section class="section section--projects" id="projects">
   <div class="wrap">
     <div class="section__head">
-      <p class="eyebrow" data-reveal>Our projects</p>
+      <p class="eyebrow" data-reveal>Feature Projects</p>
       <h2 class="section__title" data-reveal data-reveal-delay="1">
         What we support
       </h2>
@@ -96,7 +96,13 @@ title: Good Software Foundation
       {%- for project in site.data.projects %}
       <article class="card" data-reveal data-reveal-delay="{{ forloop.index0 | modulo: 3 | plus: 1 }}">
         <div class="card__top">
-          <span class="card__icon">{% include icon.html name=project.icon %}</span>
+          <span class="card__icon{% if project.logo %} card__icon--image{% endif %}">
+            {%- if project.logo -%}
+            <img src="{{ project.logo | relative_url }}" alt="{{ project.name }} app icon" />
+            {%- else -%}
+            {% include icon.html name=project.icon %}
+            {%- endif -%}
+          </span>
           {%- if project.status %}
           <span class="badge badge--{{ project.status | downcase }}">{{ project.status }}</span>
           {%- endif %}

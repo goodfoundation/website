@@ -1,0 +1,117 @@
+---
+layout: default
+title: MasjidFeed
+description: A native mobile frontend that brings a mosque website into the hands of its community.
+permalink: /p/masjidfeed/
+---
+
+<section class="project-hero">
+  <div class="wrap project-hero__inner">
+    <div>
+      <p class="eyebrow" data-reveal>Feature project</p>
+      <h1 class="project-hero__title" data-reveal data-reveal-delay="1">
+        MasjidFeed
+      </h1>
+      <p class="project-hero__lede" data-reveal data-reveal-delay="2">
+        A native mobile frontend for existing mosque websites, made to keep a
+        congregation close to the prayer hall and to one another.
+      </p>
+      <a class="btn btn--solid" href="{{ '/#projects' | relative_url }}" data-reveal data-reveal-delay="3">
+        View feature projects {% include icon.html name="arrow" %}
+      </a>
+    </div>
+    <div class="project-hero__art" data-reveal data-reveal-delay="2">
+      <div class="project-app-icon">
+        <img
+          src="{{ '/assets/masjidfeed-app-icon.png' | relative_url }}"
+          alt="MasjidFeed app icon"
+          width="1024"
+          height="1024"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap project-overview">
+    <div>
+      <p class="eyebrow" data-reveal>One familiar place</p>
+      <h2 class="project-overview__title" data-reveal data-reveal-delay="1">
+        The information your community needs, ready when it matters.
+      </h2>
+    </div>
+    <div class="project-overview__body" data-reveal data-reveal-delay="2">
+      <p>
+        MasjidFeed turns a mosque's existing website into a calm, native app
+        experience for iOS and Android. Prayer times, iqamah details, Jumu'ah
+        schedules, announcements and upcoming events are all easy to find.
+      </p>
+      <p>
+        It connects through a companion WordPress integration, so each masjid
+        can keep its own identity, content and day-to-day publishing workflow.
+        The app can be configured to show the services that particular community
+        offers, including donations, directions and prayer reminders.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--projects">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>Inside the app</p>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">
+        Familiar information, made native.
+      </h2>
+    </div>
+    <div class="project-screenshots">
+      {%- assign screenshots = "6819,6820,6821,6822,6823,6825,6826" | split: "," %}
+      {%- for screenshot in screenshots %}
+      <figure class="project-screenshot" data-reveal data-reveal-delay="{{ forloop.index0 | modulo: 4 | plus: 1 }}">
+        <img
+          src="{{ '/assets/masjidfeed-screenshots/IMG_' | append: screenshot | append: '.PNG' | relative_url }}"
+          alt="MasjidFeed app screen {{ forloop.index }}"
+          width="1206"
+          height="2622"
+          loading="lazy"
+        />
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--projects">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>Designed for the daily rhythm</p>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">
+        Built around the moments that bring a community together.
+      </h2>
+    </div>
+    <div class="project-features">
+      <article class="project-feature" data-reveal data-reveal-delay="1">
+        <h3>Prayer at a glance</h3>
+        <p>
+          Daily prayer, iqamah and Jumu'ah times are clear, current and ready
+          from the home screen or a home-screen widget.
+        </p>
+      </article>
+      <article class="project-feature" data-reveal data-reveal-delay="2">
+        <h3>News worth noticing</h3>
+        <p>
+          Announcements, posts and events give every member a direct line to
+          what is happening at their masjid, with optional notifications.
+        </p>
+      </article>
+      <article class="project-feature" data-reveal data-reveal-delay="3">
+        <h3>Support and connection</h3>
+        <p>
+          Donations, contact details, directions and a Qibla compass make it
+          simpler to participate, arrive and give.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>

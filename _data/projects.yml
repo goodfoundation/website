@@ -1,95 +1,15 @@
 # Each entry renders as a project card on the home page.
 # `icon` is an inline SVG path set defined in _includes/icon.html.
-- name: Open Ledger
-  tagline: Transparent finances for non-profits
-  icon: ledger
-  status: Active
+# `logo` is a raster app icon placed inside the same icon frame.
+- name: MasjidFeed
+  tagline: Your masjid, in the hands of its community
+  logo: /assets/masjidfeed-app-icon.png
+  status: In development
   description: >-
-    A double-entry bookkeeping platform purpose-built for charities and
-    community organisations, so every donation can be traced from pledge to
-    impact without an accounting degree.
-  tags: [TypeScript, Postgres, Self-hosted]
+    A native mobile frontend for existing mosque websites, bringing prayer
+    times, announcements, events and giving into one familiar place.
+  tags: [iOS, Android, WordPress]
   links:
-    - label: Visit website
-      url: "#"
-      primary: true
-    - label: Source
-      url: https://github.com/goodfoundation
-
-- name: Quiet Mail
-  tagline: Private, spam-free email for small teams
-  icon: mail
-  status: Active
-  description: >-
-    An end-to-end encrypted mail stack that a two-person non-profit can run on a
-    single server. No tracking pixels, no data mining, no surprises in the
-    terms of service.
-  tags: [Go, IMAP, Encryption]
-  links:
-    - label: Visit website
-      url: "#"
-      primary: true
-    - label: Source
-      url: https://github.com/goodfoundation
-
-- name: Atlas Learn
-  tagline: An offline-first classroom in a box
-  icon: book
-  status: Incubating
-  description: >-
-    Curriculum, assessments and progress tracking that keep working when the
-    network does not. Built with teachers in low-connectivity regions, and
-    translated by the communities that use it.
-  tags: [Offline-first, PWA, i18n]
-  links:
-    - label: Visit website
-      url: "#"
-      primary: true
-    - label: Source
-      url: https://github.com/goodfoundation
-
-- name: Signal Health
-  tagline: Clinical record keeping for community clinics
-  icon: heart
-  status: Active
-  description: >-
-    A lightweight electronic health record designed for clinics with limited
-    budgets and strict privacy requirements. Data stays where the clinic wants
-    it, and the audit trail is readable by humans.
-  tags: [Rust, FHIR, Privacy]
-  links:
-    - label: Visit website
-      url: "#"
-      primary: true
-    - label: Source
-      url: https://github.com/goodfoundation
-
-- name: Commons Maps
-  tagline: Community mapping without surveillance
-  icon: map
-  status: Active
-  description: >-
-    Tiles, geocoding and routing built on open data, so civic projects can put
-    their neighbourhood on the map without handing user locations to an ad
-    network.
-  tags: [OpenStreetMap, APIs, Self-hosted]
-  links:
-    - label: Visit website
-      url: "#"
-      primary: true
-    - label: Source
-      url: https://github.com/goodfoundation
-
-- name: Steward
-  tagline: Maintainer support and sustainability grants
-  icon: sprout
-  status: Programme
-  description: >-
-    Not a codebase but a commitment: recurring grants, security reviews and
-    release engineering help for maintainers of critical libraries that nobody
-    is paying to keep alive.
-  tags: [Grants, Security, Mentorship]
-  links:
-    - label: Apply for support
-      url: "#"
+    - label: Explore MasjidFeed
+      url: /p/masjidfeed
       primary: true
