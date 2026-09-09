@@ -225,7 +225,8 @@ ul {
   }
 }
 
-.btn.btn--github:hover .icon {
+.btn.btn--github:hover .icon,
+.btn.btn--store:hover .icon {
   transform: none;
 }
 
