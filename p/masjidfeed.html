@@ -8,7 +8,9 @@ permalink: /p/masjidfeed/
 <section class="project-hero">
   <div class="wrap project-hero__inner">
     <div>
-      <p class="eyebrow" data-reveal>Feature project</p>
+      <a class="eyebrow eyebrow--back" href="{{ '/#projects' | relative_url }}" data-reveal>
+        {% include icon.html name="arrow-left" %} Feature project
+      </a>
       <h1 class="project-hero__title" data-reveal data-reveal-delay="1">
         MasjidFeed
       </h1>
@@ -16,9 +18,22 @@ permalink: /p/masjidfeed/
         A native mobile frontend for existing mosque websites, made to keep a
         congregation close to the prayer hall and to one another.
       </p>
-      <a class="btn btn--solid" href="{{ '/#projects' | relative_url }}" data-reveal data-reveal-delay="3">
-        View feature projects {% include icon.html name="arrow" %}
-      </a>
+      <div class="project-hero__actions" data-reveal data-reveal-delay="3">
+        <a
+          class="btn btn--solid"
+          href="https://play.google.com/store/apps/details?id=com.goodsoftware.masjidapp"
+          rel="noopener"
+        >
+          {% include icon.html name="google-play" %} Get it on Google Play
+        </a>
+        <a
+          class="btn btn--solid"
+          href="https://apps.apple.com/us/app/masjidfeed/id6794994746"
+          rel="noopener"
+        >
+          {% include icon.html name="app-store" %} Download on the App Store
+        </a>
+      </div>
     </div>
     <div class="project-hero__art" data-reveal data-reveal-delay="2">
       <div class="project-app-icon">
@@ -53,6 +68,22 @@ permalink: /p/masjidfeed/
         The app can be configured to show the services that particular community
         offers, including donations, directions and prayer reminders.
       </p>
+      <div class="project-links" data-reveal>
+        <a
+          class="btn btn--solid btn--github"
+          href="https://github.com/masjidfeed/wordpress"
+          rel="noopener"
+        >
+          {% include icon.html name="github" %} WordPress module
+        </a>
+        <a
+          class="btn btn--solid btn--github"
+          href="https://github.com/masjidfeed/app"
+          rel="noopener"
+        >
+          {% include icon.html name="github" %} Mobile app
+        </a>
+      </div>
     </div>
   </div>
 </section>
