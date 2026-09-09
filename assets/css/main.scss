@@ -222,12 +222,11 @@ ul {
 .btn--github {
   .icon {
     font-size: 1.9em;
-    transition: none;
   }
+}
 
-  &:hover .icon {
-    transform: none;
-  }
+.btn.btn--github:hover .icon {
+  transform: none;
 }
 
 /* ==========================================================================
