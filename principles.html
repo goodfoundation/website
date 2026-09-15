@@ -1,0 +1,29 @@
+---
+layout: default
+title: Principles
+description: The commitments the Good Software Foundation does not trade away.
+permalink: /principles/
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>How we work</p>
+    <h1 class="page-hero__title" data-reveal data-reveal-delay="1">
+      Commitments we do not trade away
+    </h1>
+  </div>
+</section>
+
+<section class="section section--principles">
+  <div class="wrap">
+    <div class="principles">
+      {%- for principle in site.data.principles %}
+      <div class="principle" data-reveal data-reveal-delay="{{ forloop.index }}">
+        <span class="principle__icon">{% include icon.html name=principle.icon %}</span>
+        <h3>{{ principle.title }}</h3>
+        <p>{{ principle.body }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

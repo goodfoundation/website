@@ -72,36 +72,19 @@
     });
   }
 
-  /* ---- Active section highlighting -------------------------------------- */
+  /* ---- Active page highlighting ------------------------------------------ */
 
   var navLinks = Array.prototype.slice.call(
-    document.querySelectorAll("[data-nav] a[href^='#']")
+    document.querySelectorAll("[data-nav] a, [data-mobile-nav] a")
   );
 
-  if (navLinks.length && "IntersectionObserver" in window) {
-    var sections = navLinks
-      .map(function (link) {
-        return document.querySelector(link.getAttribute("href"));
-      })
-      .filter(Boolean);
+  var path = window.location.pathname.replace(/\/index\.html$/, "/");
+  if (path !== "/") path = path.replace(/\/$/, "");
 
-    var sectionObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          navLinks.forEach(function (link) {
-            link.classList.toggle(
-              "is-active",
-              link.getAttribute("href") === "#" + entry.target.id
-            );
-          });
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-
-    sections.forEach(function (section) {
-      sectionObserver.observe(section);
-    });
-  }
+  navLinks.forEach(function (link) {
+    var linkPath = new URL(link.href, window.location.origin).pathname;
+    linkPath = linkPath.replace(/\/index\.html$/, "/");
+    if (linkPath !== "/") linkPath = linkPath.replace(/\/$/, "");
+    link.classList.toggle("is-active", linkPath === path);
+  });
 })();

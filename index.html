@@ -18,10 +18,10 @@ title: Good Software Foundation
       solving it.
     </p>
     <div class="hero__actions" data-reveal data-reveal-delay="3">
-      <a class="btn btn--solid" href="#projects">
+      <a class="btn btn--solid" href="{{ '/projects/' | relative_url }}">
         See feature projects {% include icon.html name="arrow" %}
       </a>
-      <a class="btn btn--ghost" href="#support">Support the mission</a>
+      <a class="btn btn--ghost" href="{{ '/support/' | relative_url }}">Support the mission</a>
     </div>
     <div class="hero__mark" data-reveal data-reveal-delay="4">
       <img
@@ -43,6 +43,9 @@ title: Good Software Foundation
         <h2 class="section__title" data-reveal data-reveal-delay="1">
           We teach builders, and back the tools their communities ask for.
         </h2>
+        <a class="btn btn--ghost" href="{{ '/about/' | relative_url }}" data-reveal data-reveal-delay="2">
+          More about us {% include icon.html name="arrow" %}
+        </a>
       </div>
       <div class="about__body">
         <p data-reveal data-reveal-delay="2">
@@ -74,106 +77,6 @@ title: Good Software Foundation
         <span class="stat__note">{{ stat.note }}</span>
       </div>
       {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--projects" id="projects">
-  <div class="wrap">
-    <div class="section__head">
-      <p class="eyebrow" data-reveal>Feature Projects</p>
-      <h2 class="section__title" data-reveal data-reveal-delay="1">
-        What we support
-      </h2>
-      <p class="section__lede" data-reveal data-reveal-delay="2">
-        Each project is developed in the open, governed transparently and built
-        to keep running long after the first release.
-      </p>
-    </div>
-
-    <div class="cards">
-      {%- for project in site.data.projects %}
-      <article class="card" data-reveal data-reveal-delay="{{ forloop.index0 | modulo: 3 | plus: 1 }}">
-        <div class="card__top">
-          <span class="card__icon{% if project.logo %} card__icon--image{% endif %}">
-            {%- if project.logo -%}
-            <img src="{{ project.logo | relative_url }}" alt="{{ project.name }} app icon" />
-            {%- else -%}
-            {% include icon.html name=project.icon %}
-            {%- endif -%}
-          </span>
-          {%- if project.status %}
-          <span class="badge badge--{{ project.status | downcase }}">{{ project.status }}</span>
-          {%- endif %}
-        </div>
-        <h3 class="card__title">{{ project.name }}</h3>
-        <p class="card__tagline">{{ project.tagline }}</p>
-        <p class="card__desc">{{ project.description }}</p>
-        {%- if project.tags %}
-        <ul class="tags">
-          {%- for tag in project.tags %}
-          <li>{{ tag }}</li>
-          {%- endfor %}
-        </ul>
-        {%- endif %}
-        {%- if project.links %}
-        <div class="card__links">
-          {%- for link in project.links %}
-          <a
-            class="card__link{% if link.primary %} card__link--primary{% endif %}"
-            href="{{ link.url }}"
-            {% unless link.url contains '#' %}rel="noopener"{% endunless %}
-          >
-            {{ link.label }}
-            {% include icon.html name="arrow" %}
-          </a>
-          {%- endfor %}
-        </div>
-        {%- endif %}
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--principles" id="principles">
-  <div class="wrap">
-    <div class="section__head">
-      <p class="eyebrow" data-reveal>How we work</p>
-      <h2 class="section__title" data-reveal data-reveal-delay="1">
-        Commitments we do not trade away
-      </h2>
-    </div>
-
-    <div class="principles">
-      {%- for principle in site.data.principles %}
-      <div class="principle" data-reveal data-reveal-delay="{{ forloop.index }}">
-        <span class="principle__icon">{% include icon.html name=principle.icon %}</span>
-        <h3>{{ principle.title }}</h3>
-        <p>{{ principle.body }}</p>
-      </div>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section--cta" id="support">
-  <div class="wrap">
-    <div class="cta" data-reveal>
-      <h2 class="cta__title">Help us keep good software alive.</h2>
-      <p class="cta__lede">
-        Donate, contribute code, or nominate a project that deserves support.
-        Every contribution goes directly into maintenance, security and the
-        people who do the work.
-      </p>
-      <div class="cta__actions">
-        <a class="btn btn--solid" href="mailto:{{ site.email }}">
-          Get in touch {% include icon.html name="arrow" %}
-        </a>
-        <a class="btn btn--ghost" href="https://github.com/{{ site.github_org }}" rel="noopener">
-          {% include icon.html name="github" %} Contribute on GitHub
-        </a>
-      </div>
     </div>
   </div>
 </section>

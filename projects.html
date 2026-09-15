@@ -1,0 +1,66 @@
+---
+layout: default
+title: Feature Projects
+description: Open source projects supported by the Good Software Foundation, developed in the open and built to keep running.
+permalink: /projects/
+---
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Feature Projects</p>
+    <h1 class="page-hero__title" data-reveal data-reveal-delay="1">
+      What we support
+    </h1>
+    <p class="page-hero__lede" data-reveal data-reveal-delay="2">
+      Each project is developed in the open, governed transparently and built
+      to keep running long after the first release.
+    </p>
+  </div>
+</section>
+
+<section class="section section--projects">
+  <div class="wrap">
+    <div class="cards">
+      {%- for project in site.data.projects %}
+      <article class="card" data-reveal data-reveal-delay="{{ forloop.index0 | modulo: 3 | plus: 1 }}">
+        <div class="card__top">
+          <span class="card__icon{% if project.logo %} card__icon--image{% endif %}">
+            {%- if project.logo -%}
+            <img src="{{ project.logo | relative_url }}" alt="{{ project.name }} app icon" />
+            {%- else -%}
+            {% include icon.html name=project.icon %}
+            {%- endif -%}
+          </span>
+          {%- if project.status %}
+          <span class="badge badge--{{ project.status | downcase }}">{{ project.status }}</span>
+          {%- endif %}
+        </div>
+        <h3 class="card__title">{{ project.name }}</h3>
+        <p class="card__tagline">{{ project.tagline }}</p>
+        <p class="card__desc">{{ project.description }}</p>
+        {%- if project.tags %}
+        <ul class="tags">
+          {%- for tag in project.tags %}
+          <li>{{ tag }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        {%- if project.links %}
+        <div class="card__links">
+          {%- for link in project.links %}
+          <a
+            class="card__link{% if link.primary %} card__link--primary{% endif %}"
+            href="{{ link.url }}"
+            {% unless link.url contains '#' %}rel="noopener"{% endunless %}
+          >
+            {{ link.label }}
+            {% include icon.html name="arrow" %}
+          </a>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
