@@ -13,3 +13,16 @@
     - label: Explore MasjidFeed
       url: /p/masjidfeed
       primary: true
+- name: Community Tech Kit
+  tagline: Practical tech, for community teams
+  logo: /assets/ctk-mark.svg
+  status: Active
+  description: >-
+    A curated kit for small non-profits and community groups, listing free
+    and discounted software with eligibility notes, along with guides on
+    accounting setup and QuickBooks automation.
+  tags: [Guides, Directory, QuickBooks]
+  links:
+    - label: Visit Community Tech Kit
+      url: https://goodfoundation.github.io/community-tech-kit/
+      primary: true
